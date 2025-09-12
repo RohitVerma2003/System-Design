@@ -21,6 +21,8 @@ bool PaymentSystem::make_payment(PaymentType type){
 void PaymentSystem::display_info(){
     cout<<"=====Payment Info====="<<endl;
     cout<<"id: "<<this->id<<endl;
+    cout<<"Total Charge: "<<this->charge<<endl;
+    cout<<"Occupancy time: "<<this->occupancy_time<<endl;
     cout<<"Payment Method: ";
 
     switch(this->payment_type){
