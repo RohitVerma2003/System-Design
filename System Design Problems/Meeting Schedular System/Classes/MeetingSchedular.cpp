@@ -1,5 +1,21 @@
 #include "../Headers/MeetingSchedular.hpp"
 
+MeetingSchedular* MeetingSchedular::instance = nullptr;
+mutex MeetingSchedular::mtx;
+
+MeetingSchedular::MeetingSchedular(){}
+
+MeetingSchedular* MeetingSchedular::get_instance(){
+    if(instance == nullptr){
+        lock_guard<mutex> guard(mtx);
+        if(instance == nullptr){
+            instance = new MeetingSchedular();
+        }
+    }
+
+    return instance;
+}
+
 void MeetingSchedular::add_room(Room* room){
     this->rooms.push_back(room);
 }

@@ -1,7 +1,7 @@
 #include "../Headers/MeetingSchedular.hpp"
 
 int main(){
-    MeetingSchedular* schedular = new MeetingSchedular();
+    MeetingSchedular* schedular = MeetingSchedular::get_instance();
 
     Participant* p1 = new Participant("001" , "Rohit" , "rohit@gmail.com");
     Participant* p2 = new Participant("002" , "Harsh" , "harsh@gmail.com");
