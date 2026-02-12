@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: Build Parking Lot System",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "main.cpp",
+                "classes/Floor.cpp",
+                "classes/ParkingLot.cpp",
+                "classes/ParkingSpot.cpp",
+                "classes/Payment.cpp",
+                "classes/PaymentProcessor.cpp",
+                "classes/Ticket.cpp",
+                "classes/User.cpp",
+                "classes/Vehicle.cpp",
+                "classes/ParkingSpotFinder.cpp",
+                "-o",
+                "output/main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "C/C++: Run Parking Lot System",
+            "type": "shell",
+            "command": "${workspaceFolder}/output/main.exe",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "dependsOn": ["C/C++: Build Parking Lot System"],
+            "group": {
+                "kind": "build"
+            }
+        }
+    ]
+}
