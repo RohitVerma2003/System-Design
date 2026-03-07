@@ -1,0 +1,5 @@
+[INFO] 2026-03-07 14:27:24 This is information log1
+[INFO] 2026-03-07 14:27:24 This is information log2
+[INFO] 2026-03-07 14:39:53 This is information log1
+[INFO] 2026-03-07 14:39:53 This is information log2
+[ERROR] 2026-03-07 14:39:53 This is an error
