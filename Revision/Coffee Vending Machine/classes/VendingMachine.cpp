@@ -51,8 +51,9 @@ bool VendingMachine::insert_money(int money){
     if(this->selected_coffee.get_price() > money){
         std::cout<<"Money Is not Sufficient..."<<std::endl;
         this->set_state(VendingMachineState::DISPENSE);
-        this->dispense_money();
+        this->dispense_money(money);
         this->set_state(VendingMachineState::IDLE);
+        return false;
     }
 
     this->set_state(VendingMachineState::PROCESSING);
@@ -78,4 +79,9 @@ int VendingMachine::dispense_money(){
     this->inserted_money = 0;
     std::cout<<"Dispensed Money -> "<<result<<std::endl;
     return result;
+}
+
+int VendingMachine::dispense_money(int price){
+    std::cout<<"Dispensed Money -> "<<price<<std::endl;
+    return price;
 }

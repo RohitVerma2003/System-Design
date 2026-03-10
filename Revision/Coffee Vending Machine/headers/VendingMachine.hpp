@@ -28,6 +28,8 @@ public:
     Coffee dispense_coffee();
 
     int dispense_money();
+
+    int dispense_money(int money);
 };
 
 #endif
